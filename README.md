@@ -1,1 +1,1 @@
-https://cosmhyccc.github.io/skilltok/
+https://skilltok.vercel.app/
