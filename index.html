@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>SkillTok AI – Landing Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillTok AI</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      background: #000000;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .centered {
+      text-align: center;
+      font-size: 2rem;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+    .cursor {
+      display: inline-block;
+      width: 1ch;
+      color: #fff;
+      animation: blink 1s steps(2, start) infinite;
+      font-weight: bold;
+      font-size: 1em;
+      vertical-align: baseline;
+    }
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Download link -->
-  <p>
-    <!-- Replace the URL below with your actual download link -->
-    <a href="https://example.com/download">Download SkillTok&nbsp;AI</a>
-  </p>
-
-  <!-- Landing-page copy -->
-  <p>Here's a challenge for you. Read this article without picking up your phone.</p>
-
-  <p>The world today is plagued, not with the excess of something bad. Rather the lack of something good. Something essential.</p>
-
-  <p><strong>Attention.</strong></p>
-
-
-  <p>I hope you all like it. I hope we can improve the world, one scroll at a time.</p>
-
-  <p>Thank you &lt;3</p>
-
-  <p>Saif</p>
-
+  <div class="centered">
+    <a><span id="typing"></span><span class="cursor">|</span></a>
+  </div>
+  <script>
+    const text = "unbrainrot yourself";
+    const target = document.getElementById('typing');
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 60);
+      }
+    }
+    window.addEventListener('DOMContentLoaded', type);
+  </script>
+  </div>
 </body>
 </html>
