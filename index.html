@@ -12,29 +12,38 @@
   <title>SkillTok AI</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-      width: 100vw;
+      width: 100%;
       background: #000000;
       color: #fff;
-      font-family: sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .main-content {
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
+    
     .centered {
       text-align: center;
       font-size: 2rem;
     }
+    
     a {
       color: #ffffff;
       text-decoration: none;
     }
+    
     a:hover {
       color: #ffffff;
     }
+    
     .cursor {
       display: inline-block;
       width: 1ch;
@@ -44,16 +53,80 @@
       font-size: 1em;
       vertical-align: baseline;
     }
+    
     @keyframes blink {
       0%, 50% { opacity: 1; }
       51%, 100% { opacity: 0; }
     }
+    
+    .footer {
+      padding: 60px 0 40px;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .footer-heading {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+    
+    .university-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+    
+    .university-logos img {
+      height: 24px;
+      width: auto;
+      filter: grayscale(1) brightness(3);
+      opacity: 0.9;
+      transition: filter 0.3s ease, opacity 0.3s ease;
+      object-fit: contain;
+      margin: 0 20px;
+    }
+    
+    .university-logos img:hover {
+      filter: grayscale(0) brightness(2);
+      opacity: 1;
+    }
+    
+    .university-logos .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
-  <div class="centered">
-    <a><span id="typing"></span><span class="cursor">|</span></a>
+  <div class="main-content">
+    <div class="centered">
+      <a><span id="typing"></span><span class="cursor">|</span></a>
+    </div>
   </div>
+  
+  <footer class="footer">
+    <div class="footer-heading">Used by top students at leading universities</div>
+    <div class="university-logos">
+      <div class="row">
+        <img src="assets/stanford.png" alt="Stanford University" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+        <img src="assets/nyu.png" alt="New York University" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+        <img src="assets/yale.png" alt="Yale University" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+        <img src="assets/berkley.png" alt="Berkeley" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+        <img src="assets/georgiatech.png" alt="Georgia Tech" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+        <img src="assets/cambridge.png" alt="Cambridge University" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
+      </div>
+    </div>
+  </footer>
+  
   <script>
     const text = "unbrainrot yourself";
     const target = document.getElementById('typing');
@@ -67,6 +140,5 @@
     }
     window.addEventListener('DOMContentLoaded', type);
   </script>
-  </div>
 </body>
 </html>
