@@ -104,17 +104,37 @@
       margin-bottom: 20px;
       width: 100%;
     }
+    
+    .app-download {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .app-store-badge {
+      height: 40px;
+      width: auto;
+      transition: opacity 0.3s ease;
+    }
+    
+    .app-store-badge:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
   <div class="main-content">
     <div class="centered">
       <a><span id="typing"></span><span class="cursor">|</span></a>
+      <div class="app-download">
+        <a href="https://apps.apple.com/us/app/skilltok/id6747649185" target="_blank"><img src="assets/appstoredownload.svg" alt="Download on the App Store" class="app-store-badge"></a>
+      </div>
     </div>
   </div>
   
   <footer class="footer">
-    <div class="footer-heading">[used by top students at leading universities]</div>
+    <div class="footer-heading">used by top students at leading universities</div>
     <div class="university-logos">
       <div class="row">
         <img src="assets/stanford.png" alt="Stanford University" onerror="this.style.border='1px solid red'; this.style.padding='2px'; console.error('Failed to load: ' + this.src);" onload="console.log('Loaded: ' + this.src);" />
