@@ -1,1 +1,1 @@
-https://skilltok.vercel.app/
+https://noggn.app/
