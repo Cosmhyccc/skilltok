@@ -1,0 +1,11 @@
+# Noggn: AI Therapy App
+
+> Noggn is a personalized AI therapist that helps you "unbrainrot yourself" with empathetic conversation and self-reflection.
+
+**Overview**  
+Noggn offers AI-powered voice or text coaching, seamlessly guiding people through mental clarity and emotional resilience.
+
+## Core Links
+- [Homepage](https://noggn.app/): Your main gateway to Noggn’s web presence.
+- [App Store – Noggn AI](https://apps.apple.com/us/app/noggn-ai/id6747649185): Official iOS app listing for download and details.
+
